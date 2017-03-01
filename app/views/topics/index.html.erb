@@ -1,2 +1,8 @@
-<h1>Topics#index</h1>
-<p>Find me in app/views/topics/index.html.erb</p>
+<h1>No holds barred discussion</h1>
+
+<% @topic.each do |topic| %>
+
+<%= link_to topic.title, topic_path(topic)%>
+<br />
+<hr />
+<% end %>
