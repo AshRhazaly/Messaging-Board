@@ -1,0 +1,7 @@
+<%= form_for [@topic,@topic.posts.build] do |f|%>
+
+<%= f.text_field :content %>
+
+<%=  f.submit 'submit', class: "btn btn-default" %>
+
+<% end %>

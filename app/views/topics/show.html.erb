@@ -3,3 +3,18 @@
 <h1>
   <%= @topic.title %>
 </h1>
+
+<br />
+
+<%= link_to "Add a new post", new_topic_post_path(@topic) %>
+<%= link_to "Go back", topics_path %>
+<br />
+<hr />
+<% @topic.posts.each do |post| %>
+
+<h4>posted at <%= post.created_at.to_time %></h4>
+<%= post.content %>
+
+
+<hr />
+<% end %>
