@@ -22,7 +22,7 @@ class TopicsController < ApplicationController
   end
 
   def update
-    if @topic.update(post_params)
+    if @topic.update(topic_params)
      redirect_to topics_path
      flash[:notice] = "You've updated your topic successfully."
    else
