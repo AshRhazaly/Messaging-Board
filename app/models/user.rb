@@ -6,7 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable,
          :authentication_keys => {email:true, login: false}
-         
+
   has_many :posts
   validates :user_name,:presence => true, :uniqueness => {:case_sensitive => false }
   validates_format_of :user_name, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
